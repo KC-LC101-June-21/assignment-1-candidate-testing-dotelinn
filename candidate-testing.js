@@ -43,21 +43,22 @@ function askQuestion() {
 
   // TODO 1.2c: Let the candidate know if they have answered the question correctly or incorrectly // 
 function gradeQuiz(candidateAnswers) {
-  let grade = 0;
+  let score = 0;
   for (i = 0; i < candidateAnswers.length; i++) {
      if (candidateAnswers[i].toLowerCase() === correctAnswers[i].toLowerCase()) {
-       grade += 1;
+       score += 1;
      }
   }
-
-  let percent = Number(grade)*20
-  if (grade >= 4) {
-    console.log(`>>> Overall Grade: ${percent}% (${grade} of 5 responses correct) <<<
+  let grade
+  let percent = Number(score)*20
+  if (score >= 4) {
+    console.log(`>>> Overall Grade: ${percent}% (${score} of 5 responses correct) <<<
 >>> Status: PASS <<<`)   
   } else {
-    console.log(`>>> Overall Grade: ${percent}% (${grade} of 5 responses correct) <<<
+    console.log(`>>> Overall Grade: ${percent}% (${score} of 5 responses correct) <<<
 >>> Status: FAILED <<<`)
   }
+  return grade;
 }
 
 
