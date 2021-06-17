@@ -49,7 +49,6 @@ function gradeQuiz(candidateAnswers) {
        score += 1;
      }
   }
-  let grade
   let percent = Number(score)*20
   if (score >= 4) {
     console.log(`>>> Overall Grade: ${percent}% (${score} of 5 responses correct) <<<
@@ -58,7 +57,7 @@ function gradeQuiz(candidateAnswers) {
     console.log(`>>> Overall Grade: ${percent}% (${score} of 5 responses correct) <<<
 >>> Status: FAILED <<<`)
   }
-  return grade;
+  return percent;
 }
 
 
